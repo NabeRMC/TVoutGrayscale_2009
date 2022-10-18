@@ -1,0 +1,516 @@
+Archive member included because of file (symbol)
+
+c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_exit.o)
+                              c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5/crtm328p.o (exit)
+c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_copy_data.o)
+                              APP_blinkLED.o (__do_copy_data)
+c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_clear_bss.o)
+                              APP_blinkLED.o (__do_clear_bss)
+
+Allocating common symbols
+Common symbol       size              file
+
+UH_AddressGRPdata   0x2               A_CRT_Ini.o
+BL_SYS_16500us_req  0x1               A_SYS_Ini.o
+UH_h_line           0x2               A_CRT_Ini.o
+UB_crt_mode         0x1               A_CRT_Ini.o
+UB_CRT_OutMode      0x1               A_CRT_Ini.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5/crtm328p.o
+LOAD APP_blinkLED.o
+LOAD A_APP_Ini.o
+LOAD SYS_iniPort.o
+LOAD SYS_iniCPU.o
+LOAD SYS_iniINT.o
+LOAD A_SYS_Ini.o
+LOAD CRT_icf1_DBG.o
+LOAD A_CRT_Ini.o
+LOAD SYS_intCRT_ICF1.o
+LOAD SYS_main.o
+LOAD c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a
+LOAD c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5\libc.a
+LOAD c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000      0x262
+ *(.vectors)
+ .vectors       0x00000000       0x68 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5/crtm328p.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+                0x00000068                . = ALIGN (0x2)
+                0x00000068                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000068        0x0 linker stubs
+ *(.trampolines*)
+                0x00000068                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000068                __ctors_start = .
+ *(.ctors)
+                0x00000068                __ctors_end = .
+                0x00000068                __dtors_start = .
+ *(.dtors)
+                0x00000068                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000068        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5/crtm328p.o
+                0x00000068                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000068        0xc c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5/crtm328p.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000074       0x16 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_copy_data.o)
+                0x00000074                __do_copy_data
+ .init4         0x0000008a       0x10 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_clear_bss.o)
+                0x0000008a                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x0000009a        0x8 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5/crtm328p.o
+ *(.init9)
+ *(.text)
+ .text          0x000000a2        0x4 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5/crtm328p.o
+                0x000000a2                __vector_22
+                0x000000a2                __vector_1
+                0x000000a2                __vector_24
+                0x000000a2                __vector_12
+                0x000000a2                __bad_interrupt
+                0x000000a2                __vector_6
+                0x000000a2                __vector_3
+                0x000000a2                __vector_23
+                0x000000a2                __vector_25
+                0x000000a2                __vector_11
+                0x000000a2                __vector_13
+                0x000000a2                __vector_17
+                0x000000a2                __vector_19
+                0x000000a2                __vector_7
+                0x000000a2                __vector_5
+                0x000000a2                __vector_4
+                0x000000a2                __vector_9
+                0x000000a2                __vector_2
+                0x000000a2                __vector_21
+                0x000000a2                __vector_15
+                0x000000a2                __vector_8
+                0x000000a2                __vector_14
+                0x000000a2                __vector_16
+                0x000000a2                __vector_18
+                0x000000a2                __vector_20
+ .text          0x000000a6       0x5c APP_blinkLED.o
+                0x000000a6                APP_blinkLED
+ .text          0x00000102        0xc A_APP_Ini.o
+                0x00000102                A_APP_Ini
+ .text          0x0000010e       0x14 SYS_iniPort.o
+                0x0000010e                SYS_iniPort
+ .text          0x00000122        0x6 SYS_iniCPU.o
+                0x00000122                SYS_iniCPU
+ .text          0x00000128        0x8 SYS_iniINT.o
+                0x00000128                SYS_iniINT
+ .text          0x00000130        0x6 A_SYS_Ini.o
+                0x00000130                A_SYS_Ini
+ .text          0x00000136       0x7c CRT_icf1_DBG.o
+                0x00000136                CRT_icf1_DBG
+ .text          0x000001b2       0x2e A_CRT_Ini.o
+                0x000001b2                A_CRT_Ini
+ .text          0x000001e0       0x5a SYS_intCRT_ICF1.o
+                0x000001e0                __vector_10
+ .text          0x0000023a       0x24 SYS_main.o
+                0x0000023a                main
+ .text          0x0000025e        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_exit.o)
+ .text          0x0000025e        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_copy_data.o)
+ .text          0x0000025e        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_clear_bss.o)
+                0x0000025e                . = ALIGN (0x2)
+ *(.text.*)
+ .text.libgcc   0x0000025e        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x0000025e        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000025e        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_clear_bss.o)
+                0x0000025e                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x0000025e        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_exit.o)
+                0x0000025e                exit
+                0x0000025e                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x0000025e        0x4 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00000262                _etext = .
+
+.data           0x00800100        0xc load address 0x00000262
+                0x00800100                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800100        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5/crtm328p.o
+ .data          0x00800100        0x2 APP_blinkLED.o
+ .data          0x00800102        0x0 A_APP_Ini.o
+ .data          0x00800102        0x0 SYS_iniPort.o
+ .data          0x00800102        0x0 SYS_iniCPU.o
+ .data          0x00800102        0x0 SYS_iniINT.o
+ .data          0x00800102        0x0 A_SYS_Ini.o
+ .data          0x00800102        0x0 CRT_icf1_DBG.o
+ .data          0x00800102        0x0 A_CRT_Ini.o
+ .data          0x00800102        0xa SYS_intCRT_ICF1.o
+                0x00800102                TBL_int_icf1
+ .data          0x0080010c        0x0 SYS_main.o
+ .data          0x0080010c        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_exit.o)
+ .data          0x0080010c        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_copy_data.o)
+ .data          0x0080010c        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_clear_bss.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x0080010c                . = ALIGN (0x2)
+                0x0080010c                _edata = .
+                0x0080010c                PROVIDE (__data_end, .)
+
+.bss            0x0080010c        0xa
+                0x0080010c                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x0080010c        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/../../../../avr/lib/avr5/crtm328p.o
+ .bss           0x0080010c        0x3 APP_blinkLED.o
+ .bss           0x0080010f        0x0 A_APP_Ini.o
+ .bss           0x0080010f        0x0 SYS_iniPort.o
+ .bss           0x0080010f        0x0 SYS_iniCPU.o
+ .bss           0x0080010f        0x0 SYS_iniINT.o
+ .bss           0x0080010f        0x0 A_SYS_Ini.o
+ .bss           0x0080010f        0x0 CRT_icf1_DBG.o
+ .bss           0x0080010f        0x0 A_CRT_Ini.o
+ .bss           0x0080010f        0x0 SYS_intCRT_ICF1.o
+ .bss           0x0080010f        0x0 SYS_main.o
+ .bss           0x0080010f        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_exit.o)
+ .bss           0x0080010f        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_copy_data.o)
+ .bss           0x0080010f        0x0 c:/winavr-20090313/bin/../lib/gcc/avr/4.3.2/avr5\libgcc.a(_clear_bss.o)
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x0080010f        0x1 A_SYS_Ini.o
+                0x0080010f                BL_SYS_16500us_req
+ COMMON         0x00800110        0x6 A_CRT_Ini.o
+                0x00800110                UH_AddressGRPdata
+                0x00800112                UH_h_line
+                0x00800114                UB_crt_mode
+                0x00800115                UB_CRT_OutMode
+                0x00800116                PROVIDE (__bss_end, .)
+                0x00000262                __data_load_start = LOADADDR (.data)
+                0x0000026e                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00800116        0x0
+                0x00800116                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x00800116                PROVIDE (__noinit_end, .)
+                0x00800116                _end = .
+                0x00800116                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x140
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 APP_blinkLED.o
+ .debug_aranges
+                0x00000020       0x20 A_APP_Ini.o
+ .debug_aranges
+                0x00000040       0x20 SYS_iniPort.o
+ .debug_aranges
+                0x00000060       0x20 SYS_iniCPU.o
+ .debug_aranges
+                0x00000080       0x20 SYS_iniINT.o
+ .debug_aranges
+                0x000000a0       0x20 A_SYS_Ini.o
+ .debug_aranges
+                0x000000c0       0x20 CRT_icf1_DBG.o
+ .debug_aranges
+                0x000000e0       0x20 A_CRT_Ini.o
+ .debug_aranges
+                0x00000100       0x20 SYS_intCRT_ICF1.o
+ .debug_aranges
+                0x00000120       0x20 SYS_main.o
+
+.debug_pubnames
+                0x00000000      0x1b6
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x23 APP_blinkLED.o
+ .debug_pubnames
+                0x00000023       0x20 A_APP_Ini.o
+ .debug_pubnames
+                0x00000043       0x22 SYS_iniPort.o
+ .debug_pubnames
+                0x00000065       0x21 SYS_iniCPU.o
+ .debug_pubnames
+                0x00000086       0x21 SYS_iniINT.o
+ .debug_pubnames
+                0x000000a7       0x37 A_SYS_Ini.o
+ .debug_pubnames
+                0x000000de       0x23 CRT_icf1_DBG.o
+ .debug_pubnames
+                0x00000101       0x67 A_CRT_Ini.o
+ .debug_pubnames
+                0x00000168       0x33 SYS_intCRT_ICF1.o
+ .debug_pubnames
+                0x0000019b       0x1b SYS_main.o
+
+.debug_info     0x00000000      0x680
+ *(.debug_info)
+ .debug_info    0x00000000       0xe9 APP_blinkLED.o
+ .debug_info    0x000000e9       0x80 A_APP_Ini.o
+ .debug_info    0x00000169       0x80 SYS_iniPort.o
+ .debug_info    0x000001e9       0x80 SYS_iniCPU.o
+ .debug_info    0x00000269       0x80 SYS_iniINT.o
+ .debug_info    0x000002e9       0x9c A_SYS_Ini.o
+ .debug_info    0x00000385       0xbb CRT_icf1_DBG.o
+ .debug_info    0x00000440       0xdc A_CRT_Ini.o
+ .debug_info    0x0000051c       0xc9 SYS_intCRT_ICF1.o
+ .debug_info    0x000005e5       0x9b SYS_main.o
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000      0x38b
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000       0x79 APP_blinkLED.o
+ .debug_abbrev  0x00000079       0x3f A_APP_Ini.o
+ .debug_abbrev  0x000000b8       0x3f SYS_iniPort.o
+ .debug_abbrev  0x000000f7       0x3f SYS_iniCPU.o
+ .debug_abbrev  0x00000136       0x3f SYS_iniINT.o
+ .debug_abbrev  0x00000175       0x5d A_SYS_Ini.o
+ .debug_abbrev  0x000001d2       0x5d CRT_icf1_DBG.o
+ .debug_abbrev  0x0000022f       0x5d A_CRT_Ini.o
+ .debug_abbrev  0x0000028c       0xa0 SYS_intCRT_ICF1.o
+ .debug_abbrev  0x0000032c       0x5f SYS_main.o
+
+.debug_line     0x00000000      0x721
+ *(.debug_line)
+ .debug_line    0x00000000       0xec APP_blinkLED.o
+ .debug_line    0x000000ec       0x75 A_APP_Ini.o
+ .debug_line    0x00000161       0xa3 SYS_iniPort.o
+ .debug_line    0x00000204       0x7a SYS_iniCPU.o
+ .debug_line    0x0000027e       0x7a SYS_iniINT.o
+ .debug_line    0x000002f8       0xad A_SYS_Ini.o
+ .debug_line    0x000003a5      0x11c CRT_icf1_DBG.o
+ .debug_line    0x000004c1       0xd5 A_CRT_Ini.o
+ .debug_line    0x00000596       0xb7 SYS_intCRT_ICF1.o
+ .debug_line    0x0000064d       0xd4 SYS_main.o
+
+.debug_frame    0x00000000      0x140
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x20 APP_blinkLED.o
+ .debug_frame   0x00000020       0x20 A_APP_Ini.o
+ .debug_frame   0x00000040       0x20 SYS_iniPort.o
+ .debug_frame   0x00000060       0x20 SYS_iniCPU.o
+ .debug_frame   0x00000080       0x20 SYS_iniINT.o
+ .debug_frame   0x000000a0       0x20 A_SYS_Ini.o
+ .debug_frame   0x000000c0       0x20 CRT_icf1_DBG.o
+ .debug_frame   0x000000e0       0x20 A_CRT_Ini.o
+ .debug_frame   0x00000100       0x20 SYS_intCRT_ICF1.o
+ .debug_frame   0x00000120       0x20 SYS_main.o
+
+.debug_str      0x00000000      0x29c
+ *(.debug_str)
+ .debug_str     0x00000000       0xea APP_blinkLED.o
+                                0x11e (size before relaxing)
+ .debug_str     0x000000ea       0x23 A_APP_Ini.o
+                                 0xd9 (size before relaxing)
+ .debug_str     0x0000010d       0x2b SYS_iniPort.o
+                                 0xe1 (size before relaxing)
+ .debug_str     0x00000138       0x29 SYS_iniCPU.o
+                                 0xdf (size before relaxing)
+ .debug_str     0x00000161       0x29 SYS_iniINT.o
+                                 0xdf (size before relaxing)
+ .debug_str     0x0000018a       0x36 A_SYS_Ini.o
+                                 0xec (size before relaxing)
+ .debug_str     0x000001c0       0x45 CRT_icf1_DBG.o
+                                0x10e (size before relaxing)
+ .debug_str     0x00000205       0x3e A_CRT_Ini.o
+                                0x110 (size before relaxing)
+ .debug_str     0x00000243       0x3c SYS_intCRT_ICF1.o
+                                 0xfe (size before relaxing)
+ .debug_str     0x0000027f       0x1d SYS_main.o
+                                 0xdf (size before relaxing)
+
+.debug_loc      0x00000000       0x1e
+ *(.debug_loc)
+ .debug_loc     0x00000000       0x1e APP_blinkLED.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(ELJ09.elf elf32-avr)
+LOAD linker stubs

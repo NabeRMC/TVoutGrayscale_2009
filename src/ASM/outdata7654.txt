@@ -1,0 +1,480 @@
+	lpm	r0,Z+	;0
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;1
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;2
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;3
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;4
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;5
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;6
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;7
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;8
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;9
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;10
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;11
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;12
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;13
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;14
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;15
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;16
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;17
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;18
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;19
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;20
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;21
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;22
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;23
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;24
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;25
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;26
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;27
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;28
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;29
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;30
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;31
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;32
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;33
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;34
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;35
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;36
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;37
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;38
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;39
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;40
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;41
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;42
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;43
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;44
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;45
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;46
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;47
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;48
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;49
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;50
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;51
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;52
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;53
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;54
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;55
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;56
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;57
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;58
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;59
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;60
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;61
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;62
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;63
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;64
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;65
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;66
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;67
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;68
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;69
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;70
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;71
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;72
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;73
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;74
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;75
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;76
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;77
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;78
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;79
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;80
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;81
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;82
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;83
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;84
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;85
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;86
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;87
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;88
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;89
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;90
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;91
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;92
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;93
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;94
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;95
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;96
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;97
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;98
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;99
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;100
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;101
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;102
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;103
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;104
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;105
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;106
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;107
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;108
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;109
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;110
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;111
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;112
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;113
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;114
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;115
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;116
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;117
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;118
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;119
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;120
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;121
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;122
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;123
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;124
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;125
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;126
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;127
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;128
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;129
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;130
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;131
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;132
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;133
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;134
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;135
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;136
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;137
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;138
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;139
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;140
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;141
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;142
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;143
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;144
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;145
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;146
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;147
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;148
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;149
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;150
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;151
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;152
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;153
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;154
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;155
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;156
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;157
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;158
+	swap    r0
+	out	0x08,r0
+	lpm	r0,Z+	;159
+	swap    r0
+	out	0x08,r0

@@ -1,0 +1,99 @@
+const UB SCL_polka[79] PROGMEM = { 
+	SCLra,	/*	0	1	*/
+	SCL2re,	/*	1		*/
+	SCL2re,	/*	2		*/
+	SCL2mi,	/*	3		*/
+	
+	SCL2fa,	/*	4	2	*/
+	SCL2re,	/*	5		*/
+	SCL2re,	/*	6		*/
+	SCL2fa,	/*	7		*/
+	SCL2so,	/*	8		*/
+	SCL2fa,	/*	9		*/
+	SCL2so,	/*	10		*/
+	SCL2fa,	/*	11		*/
+	
+	SCL2mi,	/*	12	3	*/
+	SCL2do,	/*	13		*/
+	SCL2do,	/*	14		*/	
+	SCL2mi,	/*	15		*/
+	
+	SCL2fa,	/*	16		*/
+	SCL2re,	/*	17		*/
+	SCL2re,	/*	18		*/
+	
+	SCLra,	/*	19		*/
+	SCL2re,	/*	20		*/
+	SCL2re,	/*	21		*/	
+	SCL2mi,	/*	22		*/
+	
+	SCL2fa,	/*	23		*/
+	SCL2re,	/*	24		*/
+	SCL2re,	/*	25		*/
+	SCL2fa,	/*	26		*/
+	
+	SCL2ra,	/*	27	7	*/
+	SCL2so,	/*	28		*/
+	SCL2ra,	/*	29		*/
+	SCL2so,	/*	30		*/
+	SCL2fa,	/*	31		*/
+	SCL2mi,	/*	32		*/
+	
+	SCL2fa,	/*	33		*/
+	SCL2re,	/*	34		*/
+	SCL2re,	/*	35		*/
+	SCL2fa,	/*	36		*/
+	SCL2so,	/*	37		*/
+	
+	SCL2ra,	/*	38	9	*/
+	SCL2ra,	/*	39		*/
+	SCL2so,	/*	40		*/
+	SCL2ra,	/*	41		*/
+	SCL2so,	/*	42		*/
+	SCL2fa,	/*	43		*/
+	
+	SCL2mi,	/*	44		*/
+	SCL2do,	/*	45		*/
+	SCL2do,	/*	46		*/
+	SCL2mi,	/*	47		*/
+	
+	SCL2so,	/*	48	11	*/
+	SCL2so,	/*	49		*/
+	SCL2fa,	/*	50		*/
+	SCL2so,	/*	51		*/
+	SCL2fa,	/*	52		*/
+	SCL2mi,	/*	53		*/
+	
+	SCL2fa,	/*	54		*/
+	SCL2re,	/*	55		*/
+	SCL2re,	/*	56		*/
+	SCL2fa,	/*	57		*/
+	SCL2so,	/*	58		*/
+	
+	SCL2ra,	/*	59	13	*/
+	SCL2ra,	/*	60		*/
+	SCL2so,	/*	61		*/
+	SCL2ra,	/*	62		*/
+	SCL2so,	/*	63		*/
+	SCL2fa,	/*	64		*/
+	
+	SCL2mi,	/*	65		*/
+	SCL2do,	/*	66		*/
+	SCL2do,	/*	67		*/
+	SCL2mi,	/*	68		*/
+	
+	SCL2so,	/*	69	15	*/
+	SCL2so,	/*	70		*/
+	SCL2fa,	/*	71		*/
+	SCL2so,	/*	72		*/
+	SCL2fa,	/*	73		*/
+	SCL2mi,	/*	74		*/
+	
+	SCL2fa,	/*	75		*/
+	SCL2re,	/*	76		*/
+	SCL2re,	/*	77		*/
+
+	0xFF	/*	78		*/
+
+};
+

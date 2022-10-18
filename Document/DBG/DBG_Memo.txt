@@ -1,0 +1,42 @@
+●20091015
+	main()で空関数を呼んでもジッタが出る
+
+//		APP_blinkLED( BLK_LED_NOM, 0 );
+		APP_blinkLED_typeB();	
+
+void APP_blinkLED_typeB( void )
+{
+
+}
+
+---- src\C\APP\APP_blinkLED.c ---------------------------------------------------------------------
+36:       {
++000025D3:   9508        RET                      Subroutine return
+@000025D4: APP_blinkLED_typeB
+64:       }
++000025D4:   9508        RET                      Subroutine return
+
+48:       		APP_blinkLED_typeB();	
++000026A6:   940E25D4    CALL      0x000025D4     Call subroutine
++000026A8:   CFFD        RJMP      PC-0x0002      Relative jump
+
+
+
+●20091014
+	画面の変化とLEDの点滅が同期していた。
+	main()のLED点滅関数呼びをコメントにしたらジッタ止まった。何故？
+	//		APP_blinkLED( BLK_LED_NOM, 0 );	
+
+
+[dbg0915_1.JPG]
+
+CH1	PB0	( P_DBG1 )
+CH2	PB5	( P_LED1 )	
+#define	BLK_LED_CYC_NOM	0x8000
+
+[dbg0915_2.JPG]
+
+CH1	PB0	( P_DBG1 )
+CH2	PB5	( P_LED1 )	
+#define	BLK_LED_CYC_NOM	0xC000
+

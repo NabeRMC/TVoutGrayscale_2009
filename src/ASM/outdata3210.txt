@@ -1,0 +1,480 @@
+	lpm	r0,Z+	;0
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;1
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;2
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;3
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;4
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;5
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;6
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;7
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;8
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;9
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;10
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;11
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;12
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;13
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;14
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;15
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;16
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;17
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;18
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;19
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;20
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;21
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;22
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;23
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;24
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;25
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;26
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;27
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;28
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;29
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;30
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;31
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;32
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;33
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;34
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;35
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;36
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;37
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;38
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;39
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;40
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;41
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;42
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;43
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;44
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;45
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;46
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;47
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;48
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;49
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;50
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;51
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;52
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;53
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;54
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;55
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;56
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;57
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;58
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;59
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;60
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;61
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;62
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;63
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;64
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;65
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;66
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;67
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;68
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;69
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;70
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;71
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;72
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;73
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;74
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;75
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;76
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;77
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;78
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;79
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;80
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;81
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;82
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;83
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;84
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;85
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;86
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;87
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;88
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;89
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;90
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;91
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;92
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;93
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;94
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;95
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;96
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;97
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;98
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;99
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;100
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;101
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;102
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;103
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;104
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;105
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;106
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;107
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;108
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;109
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;110
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;111
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;112
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;113
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;114
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;115
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;116
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;117
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;118
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;119
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;120
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;121
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;122
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;123
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;124
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;125
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;126
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;127
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;128
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;129
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;130
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;131
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;132
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;133
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;134
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;135
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;136
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;137
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;138
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;139
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;140
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;141
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;142
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;143
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;144
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;145
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;146
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;147
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;148
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;149
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;150
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;151
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;152
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;153
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;154
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;155
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;156
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;157
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;158
+	nop
+	out	0x08,r0
+	lpm	r0,Z+	;159
+	nop
+	out	0x08,r0

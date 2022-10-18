@@ -1,0 +1,179 @@
+Getting Started Notes へ戻る
+
+!!!プログラムメモリ上の定数
+//The memory of data in the program memory is very useful because the data are filed from the beginning and don‘t have to be created first.
+!!概要
+　AVRにはプログラムメモリと汎用レジスタ/SRAMメモリの２つのメモリがあります。
+*レジスタおよびSRAMメモリ：読み書き可能ですが数が少ない(32〜数kB) 
+*プログラムメモリ：読み出ししかできませんが数が多い(512〜256kB) 
+[SRAM上の変数|Getting Started Notes - SRAM上変数]で述べたように、WinAVRでは特に指定しないと定数はSRAM上に居座ってしまいます。
+これをSRAMにコピーすることなく、使用したいときにプログラムメモリから読み出して利用すれば、メモリにゆとりができます。
+*文字列定数
+{{ref_image const.gif}}
+
+*FLASHから読み出しながら利用
+{{ref_image pgmspace.gif}}
+
+　実際に利用するときにはSRAMやレジスタにコピーして使うことになりますが、必要なときに必要なだけSRAM上の変数や作業領域にコピーして使うことになりますので、SRAMの浪費を防げます。ローカル変数なら解放も可能です。
+
+　定数の類で最もかさばるのはLCDなどの表示機器に送るメッセージやグラフィックデータの類でしょう。プログラムメモリから少しずつデータを取り出し目的の機器に送るような関数を作ってやればメモリの浪費を防げます。
+
+　SRAMからデータを読み出す命令とプログラムメモリから読み出す命令は異なるので、その動作をサポートする関数が必要になります。WinAVRにはそれを支援するための関数やマクロが多数用意されています。
+
+
+!!ヘッダーファイル
+　プログラムメモリを使用する場合には以下のインクルード指定を加えてください。
+ #include <avr/pgmspace.h> 
+　定数をプログラムメモリに置くには、定数宣言の末尾にキーワード 
+ __attribute__ ((progmem))
+を加えるか、<avr/pgmspace.h>内で定義されているマクロ PROGMEM を加えます。
+ const 型名  定数名  PROGMEM = 定数式;
+　さらに簡便に、整数や文字、文字列定数については<avr/pgmspace.h>で定義されているいくつかのデータ型が使えます。
+できるだけこちらをお使いください。<avr/pgmspace.h>は、プログラムメモリ上データの読み込みに必要な関数なども提供します。
+
+!!!様々なプログラムメモリ上定数・即値
+!!小さな整数定数は#defineマクロまたは直接記述で
+定数を実現する簡単な方法として、直接数値をコードに書いてしまう方法、それを#defineマクロで定数として扱う方法があります。
+__8bitや16bitの小さなサイズの定数を使用したい場合__はこちらの方法で事足りると思われます。
+ #define CONST_A  (1234)
+ uint16_t X;
+ 　：　　
+ X = X - CONST_A;
+この定数はプログラムメモリ内に置かれますが、独立したエリアではなく、命令の一部としてコードの中に書き込まれます（上記例では、16bit変数Xから即値1234を引くというコード）。{{br}}
+直接、式の中に値を書き込んでもいいです。使用目的によってどちらを使うか決めてください。
+ X = X - 1234;
+
+配列・文字列・構造体についても同様なことができますが、多少問題があります。各々の章を参照ください。
+
+!!単一の値(配列でない定数)をプログラムメモリ上に置く宣言:
+*8 bitデータ型: prog_uint8  , prog_int8 , prog_char
+*16bitデータ型: prog_uint16 , prog_int16
+*32bitデータ型: prog_uint32 , prog_int32
+*64bitデータ型: prog_uint64 , prog_int64
+などなど、すべての整数型の頭に"prog_"がついた型が用意されています。
+//The creation of a constante in the program memory:
+
+:プログラムメモリの中に各種サイズの定数を作る:
+ prog_char     c_flash = 1;
+ prog_uint16_t w_flash = 1234;
+
+c_constの名前で8bitの値 1 が、w_flashの名前で16bitの値1234が、プログラムメモリ内に納められます。変数c_flash,w_flashはプログラムメモリ上のアドレスを保持しています。※普通の変数で、変数がSRAM上のアドレスを保持しているのと同様です。ただ場所がSRAMではなくflashであるというだけ。
+
+//The reading of the constants:
+:定数の読み出し:
+flashから読ませるために関数を介して参照します。
+ char     res1 = pgm_read_byte(&c_flash);
+ uint16_t res2 = pgm_read_word(&w_flash);
+ // 従来は char res = PRG_RDB(&c_flash)でしたが、将来削除予定で推奨されていません
+c_flashのアドレス値(&c_flash)を使って、値をプログラムメモリから読み出し、SRAM上の変数 res に保存します。データサイズに応じて以下のような関数が用意されています。
+ pgm_read_byte(address)
+ pgm_read_word(address)
+ pgm_read_dword(address)
+
+!!配列
+:プログラムメモリの中に配列を作る:
+ const prog_char *TEN  = {0,1,2,3,4,5,6,7,8,9};
+
+:配列の要素を読む:
+ char res = pgm_read_byte(&TEN[5]); /* TEN[X]の読み出し*/
+ char res = pgm_read_byte(TEN+X); /* TENからXバイト目の読み出し */
+:文字列の配列:
+やや面倒ですが、次のようになります (AVR-LibC の FAQ 参照):
+
+ #include <avr/pgmspace.h>
+ /* 文字列をFLASH内に置いて */
+ const char foo[] PROGMEM = "Foo";
+ const char bar[] PROGMEM = "Bar";
+ 
+ /* FLASH上のアドレスポインタを要素とする配列を作る */
+ PGM_P array[2] PROGMEM = {
+     foo,
+     bar
+ };
+!!文字列定数(charの配列とちょっと違う？)
+:文字列定数宣言:
+ const prog_char msg[] = "The first line of my LCD display1";
+
+:１文字だけを取り出す:
+ char res = pgm_read_byte(&msg[position]);
+ char res = pgm_read_byte(msg+position);
+:strcpy_Pで全体をSRAM上文字列変数にコピーして使用:
+ char s[48];
+ strcpy_P(s,msg); //プログラムメモリ上文字列をSRAM上文字列変数にコピーするstrcpyです
+ 
+ LCD_print(tmp);  //LCDに文字列を表示させる関数と思ってください
+上記例のように、WinAVRのライブラリには、文字列を扱う標準的なCライブラリ関数について、FLASH上の文字列を利用できる文字列関数や入出力関数が用意されています。
+これらは関数名末尾に "_P" がついています。
+ void * memcpy_P (void *, PGM_VOID_P, size_t) 
+ int strcasecmp_P (const char *, PGM_P)
+ char * strcat_P (char *, PGM_P) 
+ int strcmp_P (const char *, PGM_P)
+ char * strcpy_P (char *, PGM_P) 
+ size_t strlcat_P (char *, PGM_P, size_t) 
+ size_t strlcpy_P (char *, PGM_P, size_t) 
+ size_t strlen_P (PGM_P) 
+ int strncasecmp_P (const char *, PGM_P, size_t) 
+ char * strncat_P (char *, PGM_P, size_t) 
+ int strncmp_P (const char *, PGM_P, size_t) 
+ char * strncpy_P (char *, PGM_P, size_t) 
+ size_t strnlen_P (PGM_P, size_t) 
+
+宣言とコピーをまとめて使いたいときは、PSTR()マクロを使って以下のように書くことも出来ます。
+ char s[48];
+ strcpy_P(s,PSTR("hogehoge"));
+ LCD_print(s);
+PSTRは、()内の文字列を前述の例と同様に宣言し、文字列のプログラムメモリ上のアドレスを返すマクロです。プログラムメモリ専用文字列関数　strcpy_P()によって、プログラムメモリからSRAMへのコピーが行われます。その後、sをSRAM上の通常の文字列として扱います。
+
+!FLASH上文字列を関数に引き渡す
+前記のようにflash文字列をSRAM上にコピーすれば、SRAM文字列を扱える関数が利用できます。しかしこれはSRAMメモリを食うので、例えばLCDに文字列を表示する関数を作る場合、プログラムメモリ上のアドレスを引数にとれる　LCD_print_P(pgm_s)のような関数を作ると便利な場合があります。状況に応じて選択してください。
+
+（SRAM用・FLASH用双方の関数を用意する手間と、SRAM節約・無駄コピー排除、どちらを重視するか）
+
+ void LCD_print_P(const prog_char *pgm_s)
+ {   
+     char c;
+     c=pgm_read_byte(pgm_s++);
+     while ((c=pgm_read_byte(pgm_s++)) != 0)
+         LCD_putc(c); //LCDに一文字を送る関数
+ }
+ 
+ //main routine側
+ LCD_print_P(PSTR("hogehoge"));
+
+PSTR()をつけるのも面倒ですので、さらにマクロを咬ませるとわかりやすくなります。 
+ //関数ライブラリ側
+ #define lcd_printp LCD(s) _print_P(PSTR(s))
+ 
+ //main routine側
+ LCD_print_P(PSTR("hogehoge"));
+
+
+!SRAM上文字列定数（簡単だけどメモリ食いな方法)
+ LCD_print("The first line of my LCD display"); 
+ //LCD_print()はSRAM上文字列を表示する関数
+実は、単純にこれ↑でもそれらしく動いてしまいますが、少し問題があります。この方法では、文字列定数をSRAM上に置く(変更できない初期値設定済み文字列変数を作る)ことになります。そのため、以下のような動作になります。
++SRAM上に文字列定数を確保する（あらかじめ、__プログラムに出てくるすべての文字列定数を__プログラムメモリからSRAM上にコピー）
++LCD_printなどの関数はSRAM上の文字列を参照する
+__この領域は開放することができません__ので、文字列定数を使った分だけSRAMが狭くなってしまいます。文字列がそれほど大きくなく、SRAMに充分余裕があるならこっちが簡単でいいのですが、使用する文字列サイズが大きく、SRAMにあまり余裕がないなら、あまりおすすめできない方法になります。
+
+!!構造体定数とその利用
+構造体に対応するprog_型がないのでちょっとやっかいですが、<avr/pgmspace.h>で定義されているキーワードPROGMEMを使って自分で定義すれば大丈夫です。
+たとえば
+ typedef struct {
+ 	int16_t X,Y,R;
+ 	uint8_t color;
+ } circle;
+ circle en PROGMEM = {-123,456,78,1};
+としておいて、利用先で
+ X = pgm_read_word(&en.X);
+のようにして各要素を読むことが出来ます。構造体全体をSRAM変数にコピーするには、
+ circle en_sram;
+ memcpy_P(&en_sram,&en,sizeof(circle));
+
+単に↓でもいけますが、SRAM上にコピーを作ってメモリを圧迫するようです。
+ #define en {-123,456,78,1}
+ circle en_sram=en;
+!!PROGMEM
+基本的には、
+ const 型名  定数名  PROGMEM = 定数式;
+で、プログラムメモリ上に定数を置いてくれるようです。

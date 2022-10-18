@@ -1,0 +1,130 @@
+
+
+/*----------------------------------------------------------------------------
+
+「どの位置」からでも2秒darkで「RESET」	BGMは「未知との遭遇」CSLはScroll
+「未知との遭遇」の最後で「STBY」へ移行							//CSLは「STBY」Blink
+「STBY」から「ナオシテクダサレ」で「WAICMD」BGMは「Famima」
+「WAICMD」から「トトトト」でネギフリ競争
+
+
+
+		mode	mode	mode
+		SYS		CRT		CLS		status		CRT			CLS					sound
+		STBY	STBY	STBY
+power							standby		wave Negi 	"MTM04 Nico-TECH"	Famima
+ON											1Hz			scroll				1time
+
+
+
+sensor
+Low-2sec	wait command	stop			"Command?"			famima
+
+
+
+UBmodeSYS	UBmodeCRT	UBmodeCLS
+
+SYS_STBY	CRT_STBY	CLS_STBY
+
+	UBmodeCRTtbl
+
+	MODE_CRT_DBG	0
+	MODE_CRT_GRP1	1
+	MODE_CRT_GRP2	2
+	MODE_CRT_CSL	3
+	MODE_CRT_4		4
+	MODE_CRT_N		5
+
+
+未知との遭遇
+レ、ミ、ド、ド、ソ
+D4  E4  C4  C3  G3　
+
+【映画】Close Encounters of the Third Kind〔米1977《監督》スティーブン・スピルバーグ《出演》リチャード・ドレイファス、テリー・ガー◆タイトルは地球外生命体とのコンタクトの度合いを示す用語で「第三種接近遭遇」と訳される
+----------------------------------------------------------------------------*/
+
+
+
+
+
+■avrdude-GUI-1.05による書き込み
+
+●Fuse
+	hFuse	DAh
+	IFuse	FFh
+	eFuse	05h
+	
+
+
+Arduino			アーデュイーノorアルデュイーノ
+Duemilanove		デュエミラノーヴェ
+
+Diecimilaに比べて、自動電源選択機能が増えています。
+USBと外部電源(ACアダプタなど)の両方がつながっているときは、外部電源からの電流で動きます。
+Diecimilaでは、ジャンパーピンで選択してやる必要がありましたね。
+
+			Flash	EEPROM	RAM
+ATmega328P	32kB	1kB		2kB
+
+
+Clock 16MHz
+
+1/16MHz = 62.5ns
+
+10us/62.5ns = 160
+
+200column×200line/8bit=5000byte
+32kB/(5kB*2) = 3枚
+
+192column * 144line /8bit = 3546byte
+32kB/(3546*2) = 4.6枚
+
+3546 * 4 = 28368
+
+32*1024 - 28368 = 4400
+
+dsPICでのキャラジェネコードサイズ
+cg_code_bit[ 7*( 0x60 ) ]
+7* (0x60) = 672byte
+
+20091005
+hachu表示のみ
+32*1024 -29142 = 3626
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:   29142 bytes (88.9% Full)
+(.text + .data + .bootloader)
+
+Data:         30 bytes (1.5% Full)
+(.data + .bss + .noinit)
+
+
+
+/*****************************************************************************
+	System Name	: Arduino 2009
+	File Name	: SYS_main.c
+	Content		: メイン処理
+	Version		: 0.0
+	CPU board	: Arduino Duemilanove
+	Compiler	: 
+	OS			: none
+	Programmer	: Meow
+	Copyleft (c)2009 Meow
+	History		:2009/08/xx
+*****************************************************************************/
+
+hFuse DA
+lFuse FF
+eFuse 05
+
+
+■16bit Timer/Counter1
+  ●Clear Timer Compare Match (CTC) Mode	
+	WGM13:0	= 0100 	OCR1A 	一致でカウンタクリア
+			= 1100	ICR1	一致でカウンタクリア
+
+
+
+

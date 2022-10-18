@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0055)http://www.geocities.jp/chako_ratta/micon/avr_tips.html -->
+<HTML lang=ja><HEAD><TITLE>AVR Tips</TITLE>
+<META http-equiv=content-type content="text/html; charset=Shift_JIS">
+<META content="MSHTML 6.00.2900.5512" name=GENERATOR><LINK 
+href="AVR Tips.files/style_micon.css" type=text/css rel=stylesheet></HEAD>
+<BODY>
+<CENTER>
+<H1>AVR Tips</H1>AVR・WinAVRを使っていて気づいた点を書き溜めていきます。<BR><BR></CENTER>
+<HR>
+
+<LI><A 
+href="http://www.geocities.jp/chako_ratta/micon/avr_tips.html#const_prog">const定数をプログラム領域のみに配置する</A>　　2006/06/17 
+
+<LI><A 
+href="http://www.geocities.jp/chako_ratta/micon/avr_tips.html#__init">main関数実行前に初期化(I/O等)を行う</A>　　2006/06/26 
+
+<LI><A 
+href="http://www.geocities.jp/chako_ratta/micon/avr_tips.html#nop">C言語でnopを書く</A>　　2007/02/04 
+
+<HR>
+<A name=const_prog>
+<H3>
+<LI>const定数をプログラム領域のみに配置する</H3></A>　const 
+のグローバル変数を定義した場合、WinAVRでは通常『初期値をFlash領域にもち、<BR>　RAMには書き換え不可能な領域を作り、main実行前に初期値を代入しておく』様です。<BR>　つまり、ROM領域とRAM領域の両方に領域を確保する事になり、RAMを無駄に使っている　事になります。<BR><BR>　Read 
+onry 
+の情報はROM領域のみに持っておきたい…<BR>　という事で、WinAVR(avr-libc)では打開策として、データをROMのみに置く様に指定出来る機構を用意されてます。<BR><BR>　　・定数宣言の末尾にキーワードを加える<BR>　　　__attribute__ 
+((progmem))<BR><BR>　　・<AVR pgmspace.h>内で定義されているマクロ PROGMEM を加える<BR>　　　const 型名 
+定数名 PROGMEM = 定数式;<BR><BR><BR>
+<TABLE height=124 width="100%" bgColor=#ffffff border=1>
+  <TBODY>
+  <TR>
+    <TD width="100%" height=99><PRE>
+<FONT color=#0000ff>#include</FONT>    &lt;avr/pgmspace.h&gt;    <FONT color=#008000>/* constﾃﾞｰﾀをROM上に置く為に必要(PROGMEM)  */</FONT>
+
+
+<FONT color=#008000>/* コレではROM・RAM 両方に領域が確保される  */</FONT>
+<FONT color=#0000ff>const unsigned char</FONT>   defaultVal = 0xAAU;
+
+<FONT color=#008000>/* この様に定義するとROM領域のみに領域が確保される  */</FONT>
+<FONT color=#0000ff>const unsigned char</FONT> PROGMEM   defaultVal2 = 0x55U;
+
+<FONT color=#008000>/* この様に定義してもよい   */</FONT>
+<FONT color=#0000ff>const unsigned char</FONT>   defaultVal3 PROGMEM = 0x00U;
+<FONT color=#0000ff>const</FONT> prog_uchar      defaultVal4         = 0x00U;
+			</PRE></TD></TR></TBODY></TABLE><BR><BR>　更に、標準型に関しては『型名 
+PROGMEM』を一つにしたデータ型を用意している<BR>　みたいなので、出来るならこれらを使用した方が良いのでは？<BR><BR><BR>
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=0 bgColor=#000000 border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=1 cellPadding=3 border=0>
+        <TBODY>
+        <TR bgColor=#ffffff>
+          <TD>void PROGMEM</TD>
+          <TD>prog_void</TD></TR>
+        <TR bgColor=#ffffff>
+          <TD>char PROGMEM</TD>
+          <TD>prog_char</TD></TR>
+        <TR bgColor=#ffffff>
+          <TD>unsigned char PROGMEM</TD>
+          <TD>prog_uchar</TD></TR>
+        <TR bgColor=#ffffff>
+          <TD>int8_t PROGMEM</TD>
+          <TD>prog_int8_t</TD></TR>
+        <TR bgColor=#ffffff>
+          <TD>uint8_t PROGMEM</TD>
+          <TD>prog_uint8_t</TD></TR>
+        <TR bgColor=#ffffff>
+          <TD>int16_t PROGMEM</TD>
+          <TD>prog_int16_t</TD></TR>
+        <TR bgColor=#ffffff>
+          <TD>uint16_t PROGMEM</TD>
+          <TD>prog_uint16_t</TD></TR>
+        <TR bgColor=#ffffff>
+          <TD>int32_t PROGMEM</TD>
+          <TD>prog_int32_t</TD></TR>
+        <TR bgColor=#ffffff>
+          <TD>uint32_t PROGMEM</TD>
+          <TD>prog_uint32_t</TD></TR>
+        <TR bgColor=#ffffff>
+          <TD>int64_t PROGMEM</TD>
+          <TD>prog_int64_t</TD></TR>
+        <TR bgColor=#ffffff>
+          <TD>uint64_t PROGMEM</TD>
+          <TD>prog_uint64_t</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></CENTER><BR>　PROGMEM 
+で定義した定数にアクセスするには以下のコマンドを利用し、一端 変数に代入してから使います。<BR>(一例です。その他は pgmspace.h 
+を参照してください。)<BR><BR>　　pgm_read_byte(address)<BR>　　pgm_read_word(address)<BR>　　pgm_read_dword(address)<BR>　　memcpy_P() 
+← 
+構造体はコレでコピーする<BR><BR>　これらはそもそもFlash(ROM)領域、SRAM(RAM)領域、EEPROM領域でアクセスする命令が異なるのが原因の様です。<BR>　H8とかだと同じ命令でアクセスするのでこんな特殊な処理はいらないのだが…。<BR>
+<HR>
+<A name=__init>
+<H3>
+<LI>main関数実行前に初期化(I/O等)を行う</H3></A>　I/Oポート等、電源投入直後の crt0 
+等が実行される前に設定しておかないと瞬灯したりしてよくない場合があります。<BR>　コレを解決する方法として "__init()" 
+関数を登録する方法があります。<BR><BR>　__init()関数は定義されている場合、avr-lib(?)で最初に呼ばれるように設定されているようです。<BR>　使用に当たっての注意点としては、まだスタックの設定等もされていない状態なので、直接値を代入するモノのみにするのが良いです。<BR><BR>
+<TABLE height=124 width="100%" bgColor=#ffffff border=1>
+  <TBODY>
+  <TR>
+    <TD width="100%" height=99><PRE>
+<FONT color=#0000ff>#include</FONT> &lt;avr/io.h&gt;
+
+<FONT color=#0000ff>void</FONT> __init(<FONT color=#0000ff>void</FONT>)
+{
+    PORTA   = 0x00U;    <FONT color=#008000>/* ﾎﾟｰﾄA LoLoLoLoLoLoLoLo   */</FONT>
+    PORTB   = 0x0FU;    <FONT color=#008000>/* ﾎﾟｰﾄB LoLoLoLoPUPUPUPU   */  /* PU: Pull Up  */</FONT>
+    DDRA    = 0xFFU;    <FONT color=#008000>/* ﾎﾟｰﾄA 出出出出出出出出   */</FONT>
+    DDRB    = 0xF0U;    <FONT color=#008000>/* ﾎﾟｰﾄB 出出出出入入入入   */</FONT>
+
+    PORTA   = 0x80U;    <FONT color=#008000>/* LED点灯  */</FONT>
+}
+
+
+<FONT color=#0000ff>void</FONT>    main(<FONT color=#0000ff>void</FONT>)
+{
+    <FONT color=#0000ff>for</FONT> (;;) {
+        ;
+    }
+
+    <FONT color=#0000ff>return</FONT>;
+}
+			</PRE></TD></TR></TBODY></TABLE><BR><BR>
+<HR>
+<A name=nop>
+<H3>
+<LI>C言語でnopを書く</H3></A>
+<TABLE height=124 width="100%" bgColor=#ffffff border=1>
+  <TBODY>
+  <TR>
+    <TD width="100%" height=99><PRE>
+<FONT color=#0000ff>#define</FONT> nop() __asm__ __volatile__ ("nop")
+			</PRE></TD></TR></TBODY></TABLE><BR><BR><BR><BR><A 
+href="http://www.geocities.jp/chako_ratta/micon/index.html">&lt;-Back</A> 
+<HR>
+
+<ADDRESS><FONT size=2>管理者： 宝 寿々郎(TAKARA Jujurou)<BR></FONT></ADDRESS><!-- text below generated by server. PLEASE REMOVE --></OBJECT></LAYER>
+<DIV></DIV></SPAN></STYLE></NOSCRIPT></TABLE></SCRIPT></APPLET><LINK 
+href="AVR Tips.files/no.css" type=text/css rel=stylesheet>
+<SCRIPT language=JavaScript>var jps=382116061;var jpt=1257467874</SCRIPT>
+
+<SCRIPT language=JavaScript src="AVR Tips.files/no.js"></SCRIPT>
+
+<SCRIPT language=JavaScript src="AVR Tips.files/geov2.js"></SCRIPT>
+
+<SCRIPT language=javascript>geovisit();</SCRIPT>
+<NOSCRIPT><IMG height=1 alt=setstats src="AVR Tips.files/visit.gif" width=1 
+border=0></NOSCRIPT><IMG height=1 alt=1 src="AVR Tips.files/serv.gif" 
+width=1></LI></BODY></HTML>

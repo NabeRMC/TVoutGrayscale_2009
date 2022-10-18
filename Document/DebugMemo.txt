@@ -1,0 +1,390 @@
+
++JaCQRV72VAgwjzBb-
+		CPI		+AFs-1+AF0-	+AFs-1+AF0-
+		BRNE	+AFs-1+AF0-	+AFs-1+AF0-
+		RJMP	+AFs-2+AF0-	+AFs-1+AF0-
+		CPI			+AFs-1+AF0-
+		RJMP		+AFs-2+AF0-
+		
+		
++AEA-0000264D: CRT+AF8-icf1+AF8-DBG
+---- src+AFw-C+AFw-CRT+AFw-CRT+AF8-icf1+AF8-DBG.c ---------------------------------------------------------------------
+																				1	2
++-0000264D:   9180011F    LDS       R24,0x011F     Load direct from data space	+AFs-1+AF0-	+AFs-1+AF0-
++-0000264F:   3081        CPI       R24,0x01       Compare with immediate		+AFs-1+AF0-	+AFs-1+AF0-
++-00002650:   F439        BRNE      PC+-0x08        Branch if not equal			+AFs-1+AF0-	+AFs-2+AF0-
++-00002651:   0000        NOP                      No operation					+AFs-1+AF0-
++-00002652:   0000        NOP                      No operation					+AFs-1+AF0-
++-00002653:   0000        NOP                      No operation					+AFs-1+AF0-
++-00002654:   0000        NOP                      No operation					+AFs-1+AF0-
++-00002655:   0000        NOP                      No operation					+AFs-1+AF0-
++-00002656:   0000        NOP                      No operation					+AFs-1+AF0-
++-00002657:   C01D        RJMP      PC+-0x001E      Relative jump					+AFs-2+AF0-
++-00002658:   3082        CPI       R24,0x02       Compare with immediate		11	+AFs-1+AF0-
++-00002659:   F431        BRNE      PC+-0x07        Branch if not equal				+AFs-1+AF0-
++-0000265A:   0000        NOP                      No operation						+AFs-1+AF0-
++-0000265B:   0000        NOP                      No operation						+AFs-1+AF0-
++-0000265C:   0000        NOP                      No operation						+AFs-1+AF0-
++-0000265D:   0000        NOP                      No operation						+AFs-1+AF0-
++-0000265E:   0000        NOP                      No operation						+AFs-1+AF0-
++-0000265F:   C015        RJMP      PC+-0x0016      Relative jump						+AFs-2+AF0-
++-00002660:   3083        CPI       R24,0x03       Compare with immediate			13
++-00002661:   F429        BRNE      PC+-0x06        Branch if not equal
+51:       		asm volatile(+ACI-nop+ACI-)+ADs-
++-00002662:   0000        NOP                      No operation
+52:       		asm volatile(+ACI-nop+ACI-)+ADs-
++-00002663:   0000        NOP                      No operation
+53:       		asm volatile(+ACI-nop+ACI-)+ADs-
++-00002664:   0000        NOP                      No operation
+54:       		asm volatile(+ACI-nop+ACI-)+ADs-
++-00002665:   0000        NOP                      No operation
++-00002666:   C00E        RJMP      PC+-0x000F      Relative jump
+56:       	if( UB+AF8-DLY+AF8-icf1 +AD0APQ- 4 )+AHs-
++-00002667:   3084        CPI       R24,0x04       Compare with immediate
++-00002668:   F421        BRNE      PC+-0x05        Branch if not equal
+57:       		asm volatile(+ACI-nop+ACI-)+ADs-
++-00002669:   0000        NOP                      No operation
+58:       		asm volatile(+ACI-nop+ACI-)+ADs-
++-0000266A:   0000        NOP                      No operation
+59:       		asm volatile(+ACI-nop+ACI-)+ADs-
++-0000266B:   0000        NOP                      No operation
++-0000266C:   C008        RJMP      PC+-0x0009      Relative jump
+61:       	if( UB+AF8-DLY+AF8-icf1 +AD0APQ- 5 )+AHs-
++-0000266D:   3085        CPI       R24,0x05       Compare with immediate
++-0000266E:   F419        BRNE      PC+-0x04        Branch if not equal
+62:       		asm volatile(+ACI-nop+ACI-)+ADs-
++-0000266F:   0000        NOP                      No operation
+63:       		asm volatile(+ACI-nop+ACI-)+ADs-
++-00002670:   0000        NOP                      No operation
++-00002671:   C003        RJMP      PC+-0x0004      Relative jump
+65:       	if( UB+AF8-DLY+AF8-icf1 +AD0APQ- 6 )+AHs-
++-00002672:   3086        CPI       R24,0x06       Compare with immediate
++-00002673:   F409        BRNE      PC+-0x02        Branch if not equal
+66:       		asm volatile(+ACI-nop+ACI-)+ADs-
++-00002674:   0000        NOP                      No operation
+98:       	UH+AF8-h+AF8-line+-+-+ADs-
++-00002675:   91800122    LDS       R24,0x0122     Load direct from data space
++-00002677:   91900123    LDS       R25,0x0123     Load direct from data space
++-00002679:   9601        ADIW      R24,0x01       Add immediate to word
++-0000267A:   93900123    STS       0x0123,R25     Store direct to data space
++-0000267C:   93800122    STS       0x0122,R24     Store direct to data space
+99:       	if( UH+AF8-h+AF8-line +AD0APQ- H+AF8-LINE+AF8-END )+AHs-
++-0000267E:   5088        SUBI      R24,0x08       Subtract immediate
++-0000267F:   4091        SBCI      R25,0x01       Subtract immediate with carry
++-00002680:   F421        BRNE      PC+-0x05        Branch if not equal
+100:      		UH+AF8-h+AF8-line +AD0- 0+ADs-
++-00002681:   92100123    STS       0x0123,R1      Store direct to data space
++-00002683:   92100122    STS       0x0122,R1      Store direct to data space
+103:      	if( UH+AF8-h+AF8-line +AD0APQ- V+AF8-SYNC+AF8-START )+AHs-	/+ACo- +V4J29FQMZx8w0TDrMLkwvzCkMN8w8zCwlYtZyw-		+ACo-/
++-00002685:   91200000    LDS       R18,0x0000     Load direct from data space
++-00002687:   91300123    LDS       R19,0x0123     Load direct from data space
++-00002689:   3022        
+		
+		
+		
++AEA-0000264D: CRT+AF8-icf1+AF8-DBG
+---- src+AFw-C+AFw-CRT+AFw-CRT+AF8-icf1+AF8-DBG.c ---------------------------------------------------------------------
+33:       +AHs-								/+ACo- +UnIwio+8MH8wSzCJlaJlcDDdMKQw8zC/MGeY2zBwMFcwZjBEMIs-	+ACo-/
++-0000264D:   9180011F    LDS       R24,0x011F     Load direct from data space
++-0000264F:   3081        CPI       R24,0x01       Compare with immediate
++-00002650:   F439        BRNE      PC+-0x08        Branch if not equal
+36:       		asm volatile(+ACI-nop+ACI-)+ADs-
++-00002651:   0000        NOP                      No operation
+37:       		asm volatile(+ACI-nop+ACI-)+ADs-
++-00002652:   0000        NOP                      No operation
+38:       		asm volatile(+ACI-nop+ACI-)+ADs-
++-00002653:   0000        NOP                      No operation
+39:       		asm volatile(+ACI-nop+ACI-)+ADs-
++-00002654:   0000        NOP                      No operation
+40:       		asm volatile(+ACI-nop+ACI-)+ADs-
++-00002655:   0000        NOP                      No operation
+41:       		asm volatile(+ACI-nop+ACI-)+ADs-
++-00002656:   0000        NOP                      No operation
++-00002657:   C01D        RJMP      PC+-0x001E      Relative jump
+43:       	if( UB+AF8-DLY+AF8-icf1 +AD0APQ- 2 )+AHs-
++-00002658:   3082        CPI       R24,0x02       Compare with immediate
++-00002659:   F431        BRNE      PC+-0x07        Branch if not equal
+44:       		asm volatile(+ACI-nop+ACI-)+ADs-
++-0000265A:   0000        NOP                      No operation
+45:       		asm volatile(+ACI-nop+ACI-)+ADs-
++-0000265B:   0000        NOP                      No operation
+46:       		asm volatile(+ACI-nop+ACI-)+ADs-
++-0000265C:   0000        NOP                      No operation
+47:       		asm volatile(+ACI-nop+ACI-)+ADs-
++-0000265D:   0000        NOP                      No operation
+48:       		asm volatile(+ACI-nop+ACI-)+ADs-
++-0000265E:   0000        NOP                      No operation
++-0000265F:   C015        RJMP      PC+-0x0016      Relative jump
+50:       	if( UB+AF8-DLY+AF8-icf1 +AD0APQ- 3 )+AHs-
++-00002660:   3083        CPI       R24,0x03       Compare with immediate
++-00002661:   F429        BRNE      PC+-0x06        Branch if not equal
+51:       		asm volatile(+ACI-nop+ACI-)+ADs-
++-00002662:   0000        NOP                      No operation
+52:       		asm volatile(+ACI-nop+ACI-)+ADs-
++-00002663:   0000        NOP                      No operation
+53:       		asm volatile(+ACI-nop+ACI-)+ADs-
++-00002664:   0000        NOP                      No operation
+54:       		asm volatile(+ACI-nop+ACI-)+ADs-
++-00002665:   0000        NOP                      No operation
++-00002666:   C00E        RJMP      PC+-0x000F      Relative jump
+56:       	if( UB+AF8-DLY+AF8-icf1 +AD0APQ- 4 )+AHs-
++-00002667:   3084        CPI       R24,0x04       Compare with immediate
++-00002668:   F421        BRNE      PC+-0x05        Branch if not equal
+57:       		asm volatile(+ACI-nop+ACI-)+ADs-
++-00002669:   0000        NOP                      No operation
+58:       		asm volatile(+ACI-nop+ACI-)+ADs-
++-0000266A:   0000        NOP                      No operation
+59:       		asm volatile(+ACI-nop+ACI-)+ADs-
++-0000266B:   0000        NOP                      No operation
++-0000266C:   C008        RJMP      PC+-0x0009      Relative jump
+61:       	if( UB+AF8-DLY+AF8-icf1 +AD0APQ- 5 )+AHs-
++-0000266D:   3085        CPI       R24,0x05       Compare with immediate
++-0000266E:   F419        BRNE      PC+-0x04        Branch if not equal
+62:       		asm volatile(+ACI-nop+ACI-)+ADs-
++-0000266F:   0000        NOP                      No operation
+63:       		asm volatile(+ACI-nop+ACI-)+ADs-
++-00002670:   0000        NOP                      No operation
++-00002671:   C003        RJMP      PC+-0x0004      Relative jump
+65:       	if( UB+AF8-DLY+AF8-icf1 +AD0APQ- 6 )+AHs-
++-00002672:   3086        CPI       R24,0x06       Compare with immediate
++-00002673:   F409        BRNE      PC+-0x02        Branch if not equal
+66:       		asm volatile(+ACI-nop+ACI-)+ADs-
++-00002674:   0000        NOP                      No operation
+98:       	UH+AF8-h+AF8-line+-+-+ADs-
++-00002675:   91800122    LDS       R24,0x0122     Load direct from data space
++-00002677:   91900123    LDS       R25,0x0123     Load direct from data space
++-00002679:   9601        ADIW      R24,0x01       Add immediate to word
++-0000267A:   93900123    STS       0x0123,R25     Store direct to data space
++-0000267C:   93800122    STS       0x0122,R24     Store direct to data space
+99:       	if( UH+AF8-h+AF8-line +AD0APQ- H+AF8-LINE+AF8-END )+AHs-
++-0000267E:   5088        SUBI      R24,0x08       Subtract immediate
++-0000267F:   4091        SBCI      R25,0x01       Subtract immediate with carry
++-00002680:   F421        BRNE      PC+-0x05        Branch if not equal
+100:      		UH+AF8-h+AF8-line +AD0- 0+ADs-
++-00002681:   92100123    STS       0x0123,R1      Store direct to data space
++-00002683:   92100122    STS       0x0122,R1      Store direct to data space
+103:      	if( UH+AF8-h+AF8-line +AD0APQ- V+AF8-SYNC+AF8-START )+AHs-	/+ACo- +V4J29FQMZx8w0TDrMLkwvzCkMN8w8zCwlYtZyw-		+ACo-/
++-00002685:   91200000    LDS       R18,0x0000     Load direct from data space
++-00002687:   91300123    LDS       R19,0x0123     Load direct from data space
++-00002689:   3022        		
+
+		
+---- src+AFw-C+AFw-CRT+AFw-CRT+AF8-icf1+AF8-DBG.c ---------------------------------------------------------------------
+33:       +AHs-								/+ACo- +UnIwio+8MH8wSzCJlaJlcDDdMKQw8zC/MGeY2zBwMFcwZjBEMIs-	+ACo-/
+M+/5P/mw-4+AAP/bg-:   9180011F    LDS       R24,0x011F     Load direct from data space			1	2		3
+M+/5P/mw-4+AAX/bg-:   3081        CPI       R24,0x01       Compare with immediate	+AFs-1+AF0-			+AFs-1+AF0-	+AFs-1+AF0AWw-1+AF0-	+AFs-1+AF0-
+M+/5P/mw-4t+/24-:   F421        BRNE      PC+-0x05        Branch if not equal		+AFs-1/2+AF0-		+AFs-1+AF0-	+AFs-2+AF0AWw-2+AF0-	+AFs-2+AF0-
+36:       		asm volatile(+ACI-nop+ACI-)+ADs-
+M+/5P/mw-4u+/24-:   0000        NOP                      No operation				+AFs-1+AF0-			+AFs-1+AF0-	
+37:       		asm volatile(+ACI-nop+ACI-)+ADs-
+M+/5P/mw-4v+/24-:   0000        NOP                      No operation				+AFs-1+AF0-			+AFs-1+AF0-
+38:       		asm volatile(+ACI-nop+ACI-)+ADs-
+M+/5P/mw-4w+/24-:   0000        NOP                      No operation				+AFs-1+AF0-			+AFs-1+AF0-
+M+/5P/mw-4x+/24-:   C011        RJMP      PC+AB3/k/+X-4      Relative jump				+AFs-2+AF0-			+AFs-2+AF0-
+40:       	if( UB+AF8-DLY+AF8-icf1 +AD0APQ- 2 )+AHs-														(7)
+M+/5P/mw-4y+/24-:   3082        CPI       R24,0x02       Compare with immediate					+AFs-1+AF0AWw-1+AF0-	+AFs-1+AF0-
+M+/5P/mw-4z+/24-:   F421        BRNE      PC+-0x05        Branch if not equal						+AFs-1+AF0AWw-1+AF0-	+AFs-2+AF0-
+41:       		asm volatile(+ACI-nop+ACI-)+ADs-											
+M+/5P/mw-4+AHv/bg-:   0000        NOP                      No operation								+AFs-1+AF0AWw-1+AF0-
+42:       		asm volatile(+ACI-nop+ACI-)+ADs-													
+M+/5P/mw-4+AHz/bg-:   0000        NOP                      No operation								+AFs-1+AF0AWw-x+AF0-
+43:       		asm volatile(+ACI-nop+ACI-)+ADs-													
+M+/5P/mw-4+AH3/bg-:   0000        NOP                      No operation								+AFs-1+AF0AWw-x+AF0-
+M+/5P/mw-4+AED/bg-:   C00B        RJMP      PC+AB3/k/+Q-4      Relative jump								+AFs-2+AF0AWw-2+AF0-
+45:       	if( UB+AF8-DLY+AF8-icf1 +AD0APQ- 3 )+AHs-														   (11)(9)
+M+/5P/mw-4A+/24-:   3083        CPI       R24,0x03       Compare with immediate							+AFs-1+AF0-
+M+/5P/mw-4B+/24-:   F421        BRNE      PC+-0x05        Branch if not equal								+AFs-1+AF0-
+46:       		asm volatile(+ACI-nop+ACI-)+ADs-																
+M+/5P/mw-4C+/24-:   0000        NOP                      No operation										+AFs-1+AF0-
+47:       		asm volatile(+ACI-nop+ACI-)+ADs-
+M+/5P/mw-4D+/24-:   0000        NOP                      No operation										+AFs-x+AF0-
+48:       		asm volatile(+ACI-nop+ACI-)+ADs-
+M+/5P/mw-4E+/24-:   0000        NOP                      No operation										+AFs-x+AF0-
+M+/5P/mw-4+/3T/bg-:   C005        RJMP      PC+AB3/k/+T-4      Relative jump										+AFs-2+AF0-
+50:       	if( UB+AF8-DLY+AF8-icf1 +AD0APQ- 4 )+AHs-																	(11)
+M+/5P/mw-4+/3X/bg-:   3084        CPI       R24,0x04       Compare with immediate
+M+/5P/mw-4+/3b/bg-:   F419        BRNE      PC+-0x04        Branch if not equal
+51:       		asm volatile(+ACI-nop+ACI-)+ADs-
+M+/5P/mw-4+/3f/bg-:   0000        NOP                      No operation
+52:       		asm volatile(+ACI-nop+ACI-)+ADs-
+M+/5P/mw-4+/3j/bg-:   0000        NOP                      No operation
+53:       		asm volatile(+ACI-nop+ACI-)+ADs-
+M+/5P/mw-4+/3n/bg-:   0000        NOP                      No operation
+86:       	UH+AF8-h+AF8-line+-+-+ADs-
+M+/5P/mw-4+/3r/bg-:   91800122    LDS       R24,0x0122     Load direct from data space
+M+/5P/mw-4+/3z/bg-:   91900123    LDS       R25,0x0123     Load direct from data space
+M+/5P/mw-4+AID/bg-:   9601        ADIW      R24,0x01       Add immediate to word
+M+/5P/mw-4+MPs-:   93900123    STS       0x0123,R25     Store direct to data space
+M+/5P/mw-4+A6A-:   93800122    STS       0x0122,R24     Store direct to data space
+87:       	if( UH+AF8-h+AF8-line +AD0APQ- H+AF8-LINE+AF8-END )+AHs-
+M+/5P/mw-4+MPs-:   5088        SUBI      R24,0x08       Subtract immediate
+M+/5P/mw-4+410-:   4091        SBCI      R25,0x01       Subtract immediate with carry
+M+/5P/mw-4+5Bk-:   F421        BRNE      PC+-0x05        Branch if not equal
+88:       		UH+AF8-h+AF8-line +AD0- 0+ADs-
+M+/5P/mw-4+5NU-:   92100123    STS       0x0123,R1      Store direct to data space
+M+/5P/mw-4+5k0-:   92100122    STS       0x0122,R1      Store direct to data space
+91:       	if( UH+AF8-h+AF8-line +AD0APQ- V+AF8-SYNC+AF8-START )+AHs-	/+ACo- +V4J29FQMZx8w0TDrMLkwvzCkMN8w8zCwlYtZyw-		+ACo-/
+M+/5P/mw-4+XPU-:   91200000    LDS       R18,0x0000     Load direct from data space
+M+/5P/mw-4+MPs-:   91300123    LDS       R19,0x0123     Load direct from data space
+M+/5P/mw-4+/4D/bg-:   3022        CPI       R18,0x02       Compare with immediate
+M+/5P/mw-4+/4H/bg-:   0531        CPC       R19,R1         Compare with carry
+M+/5P/mw-4+/4L/bg-:   F469        BRNE      PC+-0x0E
+
+
+
+---- src+AFw-C+AFw-CRT+AFw-CRT+AF8-icf1+AF8-DBG.c ---------------------------------------------------------------------
+33:       +AHs-								/+ACo- +UnIwio+8MH8wSzCJlaJlcDDdMKQw8zC/MGeY2zBwMFcwZjBEMIs-	+ACo-/
+M+/5P/mw-4+AAP/bg-:   9180011F    LDS       R24,0x011F     Load direct from data space			1	2	3
+M+/5P/mw-4+AAX/bg-:   3081        CPI       R24,0x01       Compare with immediate		+AFs-1+AF0-		+AFs-1+AF0-	+AFs-1+AF0-	+AFs-1+AF0-
+M+/5P/mw-4t+/24-:   F411        BRNE      PC+-0x03        Branch if not equal			+AFs-1/2+AF0-	+AFs-1+AF0-	+AFs-2+AF0-	+AFs-2+AF0-
+36:       		asm volatile(+ACI-nop+ACI-)+ADs-				
+M+/5P/mw-4u+/24-:   0000        NOP                      No operation					+AFs-1+AF0-		+AFs-1+AF0-	
+M+/5P/mw-4v+/24-:   C00B        RJMP      PC+AB3/k/+Q-4      Relative jump					+AFs-2+AF0-		+AFs-2+AF0-	
+38:       	if( UB+AF8-DLY+AF8-icf1 +AD0APQ- 2 )+AHs-														(5)	
+M+/5P/mw-4w+/24-:   3082        CPI       R24,0x02       Compare with immediate					+AFs-1+AF0-	+AFs-1+AF0-
+M+/5P/mw-4x+/24-:   F411        BRNE      PC+-0x03        Branch if not equal						+AFs-1+AF0-	+AFs-2+AF0-
+39:       		asm volatile(+ACI-nop+ACI-)+ADs-
+M+/5P/mw-4y+/24-:   0000        NOP                      No operation								+AFs-1+AF0-
+M+/5P/mw-4z+/24-:   C007        RJMP      PC+AB3/k/+T-4      Relative jump								+AFs-2+AF0-
+41:       	if( UB+AF8-DLY+AF8-icf1 +AD0APQ- 3 )+AHs-															(8)	
+M+/5P/mw-4+AHv/bg-:   3083        CPI       R24,0x03       Compare with immediate						+AFs-1+AF0-
+M+/5P/mw-4+AHz/bg-:   F411        BRNE      PC+-0x03        Branch if not equal							+AFs-1+AF0-
+42:       		asm volatile(+ACI-nop+ACI-)+ADs-
+M+/5P/mw-4+AH3/bg-:   0000        NOP                      No operation									+AFs-1+AF0-
+M+/5P/mw-4+AED/bg-:   C003        RJMP      PC+AB3/k/+T-4      Relative jump									+AFs-2+AF0-
+44:       	if( UB+AF8-DLY+AF8-icf1 +AD0APQ- 4 )+AHs-																(11)
+M+/5P/mw-4A+/24-:   3084        CPI       R24,0x04       Compare with immediate
+M+/5P/mw-4B+/24-:   F409        BRNE      PC+-0x02        Branch if not equal
+45:       		asm volatile(+ACI-nop+ACI-)+ADs-
+M+/5P/mw-4C+/24-:   0000        NOP                      No operation
+79:       	UH+AF8-h+AF8-line+-+-+ADs-
+M+/5P/mw-4D+/24-:   91800122    LDS       R24,0x0122     Load direct from data space
+M+/5P/mw-4+/3T/bg-:   91900123    LDS       R25,0x0123     Load direct from data space
+M+/5P/mw-4+/3b/bg-:   9601        ADIW      R24,0x01       Add immediate to word
+M+/5P/mw-4+/3f/bg-:   93900123    STS       0x0123,R25     Store direct to data space
+M+/5P/mw-4+/3n/bg-:   93800122    STS       0x0122,R24     Store direct to data space
+80:       	if( UH+AF8-h+AF8-line +AD0APQ- H+AF8-LINE+AF8-END )+AHs-
+M+/5P/mw-4+/3v/bg-:   5088        SUBI      R24,0x08       Subtract immediate
+M+/5P/mw-4+/3z/bg-:   4091        SBCI      R25,0x01       Subtract immediate with carry
+M+/5P/mw-4+/33/bg-:   F421        BRNE      PC+-0x05        Branch if not equal
+81:       		UH+AF8-h+AF8-line +AD0- 0+ADs-
+
+
+
+
+
+---- src+AFw-C+AFw-CRT+AFw-CRT+AF8-icf1+AF8-DBG.c ---------------------------------------------------------------------
+33:       +AHs-								/+ACo- +UnIwio+8MH8wSzCJlaJlcDDdMKQw8zC/MGeY2zBwMFcwZjBEMIs-	+ACo-/	2
+M+/5P/mw-4+AAP/bg-:   9180011F    LDS       R24,0x011F     Load direct from data space	+AFs-1+AF0-		+AFs-1+AF0-
+M+/5P/mw-4+AAX/bg-:   3082        CPI       R24,0x02       Compare with immediate		+AFs-1+AF0-		+AFs-1+AF0-
+M+/5P/mw-4t+/24-:   F031        BREQ      PC+-0x07        Branch if equal				+AFs-1/2+AF0-	+AFs-2+AF0-
+M+/5P/mw-4u+/24-:   3083        CPI       R24,0x03       Compare with immediate		+AFs-1+AF0-
+M+/5P/mw-4v+/24-:   F039        BREQ      PC+-0x08        Branch if equal				+AFs-1/2+AF0-
+M+/5P/mw-4w+/24-:   3081        CPI       R24,0x01       Compare with immediate		+AFs-1+AF0-
+M+/5P/mw-4x+/24-:   F449        BRNE      PC+-0x0A        Branch if not equal			+AFs-1/2+AF0-
+36:       		case 1:	asm volatile(+ACI-nop+ACI-)+ADs-
+M+/5P/mw-4y+/24-:   0000        NOP                      No operation				+AFs-1+AF0-
+M+/5P/mw-4z+/24-:   C008        RJMP      PC+AB3/k/+T-4      Relative jump
+39:       		case 2:	asm volatile(+ACI-nop+ACI-)+ADs-
+M+/5P/mw-4+AHv/bg-:   0000        NOP                      No operation
+40:       				asm volatile(+ACI-nop+ACI-)+ADs-
+M+/5P/mw-4+AHz/bg-:   0000        NOP                      No operation
+M+/5P/mw-4+AH3/bg-:   C005        RJMP      PC+AB3/k/+T-4      Relative jump
+44:       				asm volatile(+ACI-nop+ACI-)+ADs-
+M+/5P/mw-4+AED/bg-:   0000        NOP                      No operation
+45:       				asm volatile(+ACI-nop+ACI-)+ADs-
+M+/5P/mw-4A+/24-:   0000        NOP                      No operation
+46:       				asm volatile(+ACI-nop+ACI-)+ADs-
+M+/5P/mw-4B+/24-:   0000        NOP                      No operation
+M+/5P/mw-4C+/24-:   C001        RJMP      PC+AB3/k/+T-4      Relative jump
+50:       					asm volatile(+ACI-nop+ACI-)+ADs-
+M+/5P/mw-4D+/24-:   0000        NOP                      No operation
+
+
+
+
+
+
+
+
+
++MBA-NG+MBE-----------------------------------
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:   30746 bytes (93.8+ACU- Full)
+(.text +- .data +- .bootloader)
+
+Data:         34 bytes (1.7+ACU- Full)
+(.data +- .bss +- .noinit)
+
+void CRT+AF8-Out32( void )
++AHs-
+//	CRT+AF8-OutData10( UH+AF8-AddressGRPdata )+ADs-
+//	CRT+AF8-OutData32( UH+AF8-AddressGRPdata )+ADs-
+	PORTC +AD0- 0x00+ADs-
+	
+	PORTC +AD0- 0x00+ADs-
+	PORTC +AD0- 0x00+ADs-
+	PORTC +AD0- 0x00+ADs-
+	PORTC +AD0- 0x00+ADs-
+	PORTC +AD0- 0x00+ADs-
+	PORTC +AD0- 0x00+ADs-
+	
++AH0-
+----------------------------------------
+
+
+
++MBA-NG+MBE-----------------------------------
+void CRT+AF8-Out32( void )
++AHs-
+//	CRT+AF8-OutData10( UH+AF8-AddressGRPdata )+ADs-
+	CRT+AF8-OutData32( UH+AF8-AddressGRPdata )+ADs-
+	PORTC +AD0- 0x00+ADs-
++AH0-
+
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:   30746 bytes (93.8+ACU- Full)
+(.text +- .data +- .bootloader)
+
+Data:         34 bytes (1.7+ACU- Full)
+(.data +- .bss +- .noinit)
+---------------------------------------
+
+
++MBA-OK+MBE----------------------------------
+void CRT+AF8-Out32( void )
++AHs-
+//	CRT+AF8-OutData10( UH+AF8-AddressGRPdata )+ADs-
+//	CRT+AF8-OutData32( UH+AF8-AddressGRPdata )+ADs-
+	PORTC +AD0- 0x00+ADs-
++AH0-
+
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:   30734 bytes (93.8+ACU- Full)
+(.text +- .data +- .bootloader)
+
+Data:         34 bytes (1.7+ACU- Full)
+(.data +- .bss +- .noinit)
+--------------------------------------
+
++MBA-OK+MBE---------------------------------
+
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:   29960 bytes (91.4+ACU- Full)
+(.text +- .data +- .bootloader)
+
+Data:         34 bytes (1.7+ACU- Full)
+(.data +- .bss +- .noinit)
+---------------------------------------
