@@ -7,6 +7,6 @@ This is my first work with Arduino.
 ### TVoutColor_2013
 [![TVoutColor_2013_W400](https://user-images.githubusercontent.com/115850093/196180642-b91a3d41-69b6-4764-96e9-210bbce51454.jpg)](https://youtu.be/ysMUZaUsUp0)
 
-## 半径8.5cmのたこルカを物理の法則で回してみた
+### 半径8.5cmのたこルカを物理の法則で回してみた
 [![Luca_W400](https://user-images.githubusercontent.com/115850093/196390849-ccd52187-17fa-4a0b-95f0-65757395279a.jpg)](https://youtu.be/tDQuSYcQ8mk)
 
