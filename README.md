@@ -5,6 +5,7 @@ I got to know Arduino through this article.
 
 2008/6/30 
 [Arduinoでマイコンしよう!!](https://k-tai.watch.impress.co.jp/cda/article/stapa/40638.html)
+
 「．．今回は世界中でプチ話題のマイコンボードことArduino
 This time, Arduino, a microcomputer board that is a hot topic all over the world」
 
