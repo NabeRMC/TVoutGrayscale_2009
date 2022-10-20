@@ -1,13 +1,18 @@
 # TVoutGrayscale_2009
 This is my first work with Arduino, programmed in 2009.
 I got to know Arduino through this article.
+
 2008/6/30 
 [Arduinoでマイコンしよう!!](https://k-tai.watch.impress.co.jp/cda/article/stapa/40638.html)
 「．．今回は世界中でプチ話題のマイコンボードことArduino
 This time, Arduino, a microcomputer board that is a hot topic all over the world」
+
 [Arduino Diecimilia](https://docs.arduino.cc/retired/boards/arduino-diecimila)
+
 Microcontroller	ATmega168
+
 Flash Memory	16 KB (of which 2 KB used by bootloader)
+
 SRAM	1 KB
 
 ### NTSC signal with Arduino and Miku H@chuNe
