@@ -6,10 +6,15 @@ I got to know Arduino through this article.
 2008/6/30 
 [Arduinoでマイコンしよう!!](https://k-tai.watch.impress.co.jp/cda/article/stapa/40638.html)
 
-「．．今回は世界中でプチ話題のマイコンボードことArduino
+「．．今回は世界中でプチ話題のマイコンボードことArduino．．
+
 This time, Arduino, a microcomputer board that is a hot topic all over the world」
 
 [Arduino Diecimilia](https://docs.arduino.cc/retired/boards/arduino-diecimila)
+
+[Arduino Duemilanove](https://docs.arduino.cc/retired/boards/arduino-duemilanove)
+
+The Arduino Duemilanove ("2009") is a microcontroller board based on the ATmega168
 
 
 ### NTSC signal with Arduino and Miku H@chuNe
